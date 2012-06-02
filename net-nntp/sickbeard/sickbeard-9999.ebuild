@@ -57,9 +57,9 @@ src_install() {
 
 	# Install bare-bone config file (NOTE: AFAICT, sickbeard will *always* look for it in its basedir...)
 	insinto /etc/${PN}
-	newins "${FILESDIR}/config.ini" "${PN}.ini"
-	fowners root:${PN} /etc/${PN}/${PN}.ini
-	fperms 660 /etc/${PN}/${PN}.ini
+	newins "${FILESDIR}/config.ini" "config.ini"
+	fowners root:${PN} /etc/${PN}/config.ini
+	fperms 660 /etc/${PN}/config.ini
 
 	# Fix perms
 	fowners -R root:${PN} /var/lib/${PN}

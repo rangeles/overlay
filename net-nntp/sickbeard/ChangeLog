@@ -4,4 +4,8 @@
 
   01 Jun 2012; Ron Angeles <ron.angeles@gmail.com>
   sickbeard-9999.ebuild:
+  Correct the default configuration file
+
+  01 Jun 2012; Ron Angeles <ron.angeles@gmail.com>
+  sickbeard-9999.ebuild:
   Add sickbeard live ebuild
