@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2016 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+source /etc/sqm/sqm.conf
+source ${SQM_LIB_DIR}/functions.sh
+source ${SQM_LIB_DIR}/defaults.sh
+IFACE=${RC_SVCNAME#*.}
+source /etc/sqm/${IFACE}.iface.conf
+source ${SQM_LIB_DIR}/${SCRIPT}
+
+depend() {
+	need net
+	after net
+}
+
+start() {
+	ebegin "Starting SQM"
+	sqm_start
+	eend 0
+}
+
+stop() {
+	ebegin "Stopping SQM"
+	sqm_stop
+	eend 0
+}
