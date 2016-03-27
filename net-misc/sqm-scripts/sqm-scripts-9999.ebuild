@@ -28,7 +28,7 @@ src_install() {
 	emake DESTDIR="${D}" install-linux
 
 	insinto /etc/sqm
-	doins "${FILEDIR}/eth0.iface.conf.example"
+	doins "${FILESDIR}/eth0.iface.conf.example"
 
 	doinitd "${FILESDIR}/sqm.eth0"
 }
